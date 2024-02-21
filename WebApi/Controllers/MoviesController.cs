@@ -8,7 +8,7 @@ using WebApi.Models;
 
 namespace WebApi.Controllers
 {
-    [Route("[controller]/[action]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class MoviesController : ControllerBase
     {
