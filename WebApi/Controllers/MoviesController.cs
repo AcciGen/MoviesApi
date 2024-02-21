@@ -62,12 +62,13 @@ namespace WebApi.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateMovieAsync(int id, MovieDTO model)
+        public async Task<IActionResult> UpdateMovieAsync(int id, Movie model)
         {
             try
             {
                 var _model = new Movie()
                 {
+                    Id = model.Id,
                     Title = model.Title,
                     Category = model.Category,
                     Budget = model.Budget
