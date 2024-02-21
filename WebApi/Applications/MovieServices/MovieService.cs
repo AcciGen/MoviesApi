@@ -11,15 +11,9 @@ namespace WebApi.Applications.MovieServices
             _context = context;
         }
 
-        public async Task<string> CreateMovieAsync(Movie movie)
+        public async Task<string> CreateMovieAsync(Movie model)
         {
-            var model = new Movie
-            {
-                Id = movie.Id,
-                Title = movie.Title,
-                Category = movie.Category,
-                Budget = movie.Budget
-            };
+
             await _context.Movies.AddAsync(model);
             await _context.SaveChangesAsync();
 
