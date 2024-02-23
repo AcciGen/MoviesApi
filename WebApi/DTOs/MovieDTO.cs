@@ -2,8 +2,8 @@
 {
     public class MovieDTO
     {
-        public string Title { get; set; }
-        public string Category { get; set; }
-        public long Budget { get; set; }
+        public required string Title { get; set; }
+        public required string Category { get; set; }
+        public required long Budget { get; set; }
     }
 }
